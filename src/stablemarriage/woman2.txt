@@ -1,0 +1,6 @@
+﻿Woman 2 Female
+--------------
+Man 4
+Man 3
+Man 2
+Man 1

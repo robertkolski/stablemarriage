@@ -16,10 +16,13 @@ namespace stablemarriage.core
 
             var masterFile = System.IO.File.OpenText(filename);
 
+            var directory = new System.IO.FileInfo(filename).Directory.FullName;
+
             string subFilename;
             while ((subFilename = masterFile.ReadLine()) != null)
             {
-                ReadList(subFilename);
+                var fullPathSubFilename = System.IO.Path.Combine(directory, subFilename);
+                ReadList(fullPathSubFilename);
             }
 
             return population.Keys;

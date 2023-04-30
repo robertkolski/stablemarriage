@@ -121,6 +121,9 @@ namespace stablemarriage.core
                         }
                     }
                 }
+
+                p.Rejected(this);
+                return Answer.No;
             }
             throw new InvalidOperationException("Men propose to women.");
         }

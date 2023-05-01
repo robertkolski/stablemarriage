@@ -19,7 +19,7 @@ namespace stablemarriage.core
             var directory = new System.IO.FileInfo(filename).Directory.FullName;
 
             string subFilename;
-            while ((subFilename = masterFile.ReadLine()) != null)
+            while ((subFilename = masterFile.ReadLine()) != null && !string.IsNullOrWhiteSpace(subFilename))
             {
                 var fullPathSubFilename = System.IO.Path.Combine(directory, subFilename);
                 ReadList(fullPathSubFilename);
